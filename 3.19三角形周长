@@ -1,0 +1,23 @@
+package test;
+import java.util.Scanner;
+public class tests {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.println("a : ");
+		int a = input.nextInt();
+		System.out.println("b : ");
+		int b = input.nextInt();
+		System.out.println("c : ");
+		int c = input.nextInt();
+		
+		int circumference = a + b + c;
+		
+		if(a + b > c && a + c > b && b + c > a)
+			System.out.println("The triangle circumference is: " + circumference);
+		else
+			System.out.println("Wrong! ");
+	}
+
+}
