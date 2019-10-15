@@ -1,0 +1,31 @@
+package test;
+import java.util.Scanner;
+public class tests {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int lottery = (int)(Math.random() * 900) + 100;
+		System.out.println("Enter your lottery pick: ");
+		Scanner input = new Scanner(System.in);
+		int integer = input.nextInt();
+		
+		int d1 = lottery / 100 % 10;
+		int d2 = lottery / 10 % 10;
+		int d3 = lottery % 10;
+		
+		int d4 = integer / 100 % 10;
+		int d5 = integer / 10 % 10;
+		int d6 = integer % 10;
+		
+		System.out.println("The lottery number is " + lottery);
+		
+		if (integer == lottery)
+		    System.out.println("You win $10000");		
+		else if (d1 * d2 * d3 == d4 * d5 * d6)
+			System.out.println("You win $3000");
+		else if (d1 == d4 || d1 == d5 || d1 == d6 || d2 == d4 || d2 == d5 || d2 == d6 || d3 == d4 || d3 == d5 || d3 == d6)
+			System.out.println("You win $1000");
+		else
+			System.out.println("no match");
+	}
+}
