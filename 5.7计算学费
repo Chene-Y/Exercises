@@ -1,0 +1,23 @@
+package test;
+import java.util.Scanner;
+public class tests {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter year: ");
+		int x = input.nextInt();
+		
+		double sum = 10000,i,n =10000;
+		for (i = 1; i < x; i ++) {
+//			sum = sum + sum * 0.05;	
+			sum += sum * 0.05;
+			if (i < 4)
+			    n += sum;
+		}		
+			System.out.println("第 " + x + " 年的学费: " + sum);
+			System.out.println("四年学费总和: " + n);
+		input.close();
+	}
+
+}
