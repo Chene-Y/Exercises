@@ -1,0 +1,27 @@
+package test;
+import java.util.Scanner;
+public class tests {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of lines: ");
+		int lines = input.nextInt();
+		
+		int i,j;
+		for (i = 1; i <= lines; i ++) {
+			for(j = lines - 1; j >= i; j --) {				
+			    System.out.print(" " + "\t");//前面的空格（比如第一行有6个空格）
+			}
+			for(int m = 1; m <= i; m ++) {
+				 System.out.print(Math.pow(2, m - 1) + "\t");
+			}
+			for(int l = i - 1; l >= 1; l --){
+				 System.out.print(Math.pow(2, l - 1) + "\t");
+			}
+			System.out.print("\n");
+		}		
+		input.close();
+	}
+
+}
