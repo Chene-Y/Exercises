@@ -11,7 +11,7 @@ public class tests {
 		int i,j;
 		for (i = 1; i <= lines; i ++) {
 			for(j = 1; j <= lines - i; j ++) {				
-			    System.out.print("\t");//前面的空格（比如第一行有6个空格）
+			    System.out.print(" " + "\t");//前面的空格（比如第一行有6个空格）
 			}
 			for(int m = i; m >= 1; m --) {
 				System.out.print(m + "\t");//左边7*7的大三角形
