@@ -1,0 +1,21 @@
+package test;
+import java.util.Scanner;
+public class tests {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of lines: ");
+		double n = input.nextDouble();
+				
+		double e = 2, item = 1, i;
+		for(i = 2; i <= n; i ++ ) {
+			item = item / i;
+			e = e + item;
+		}
+		
+		System.out.println(e);
+		input.close();
+	}
+
+}
