@@ -1,0 +1,20 @@
+package test;
+public class tests {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		int i = 0, year;
+		System.out.print("期间所有闰年：\n");		
+		for(year = 101; year <= 2100; year ++){	
+			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+				i ++;
+				System.out.print(year + "\t");
+				if(i % 10 == 0) {
+					System.out.printf("\n");
+				}				
+			}
+		}
+		System.out.println("\n期间闰年数目：" + i);
+	}	
+}
