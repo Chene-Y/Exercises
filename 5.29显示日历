@@ -9,13 +9,13 @@ public class tests {
           
          int i,n = 31,k,m,w;
          
-         for(m = 1; m <= 12; m++){
+         for(m = 1; m <= 12; m++){//12个月和每个月的天数
         	  switch(13 - m) {
         	  case 12 : System.out.print("                 January " + year); 
         	            n = 31; 
         	            break;
         	  case 11 : System.out.print("                 February " + year); 
-        	           if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        	           if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)//判断闰年
         	               n = n - 2;
         	           else
         	        	   n = n - 3;
@@ -77,7 +77,7 @@ public class tests {
           }
           System.out.print("\n");
           System.out.print("\n");
-          day = (n + day) % 7;
+          day = (n + day) % 7;//每7天换行
           }
 		 	
     	input.close();
