@@ -1,0 +1,86 @@
+package test;
+import java.util.Scanner;
+public class tests {
+
+	public static void main(String[] args) {
+         Scanner input = new Scanner (System.in);
+         int year = input.nextInt();
+         int day = input.nextInt();
+          
+         int i,n = 31,k,m,w;
+         
+         for(m = 1; m <= 12; m++){
+        	  switch(13 - m) {
+        	  case 12 : System.out.print("                 January " + year); 
+        	            n = 31; 
+        	            break;
+        	  case 11 : System.out.print("                 February " + year); 
+        	           if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        	               n = n - 2;
+        	           else
+        	        	   n = n - 3;
+        	            break;
+        	  case 10 : System.out.print("                 March " + year);
+        	            n = 31;
+        	            break;
+        	  case 9 : System.out.print("                 April " + year);
+        	           n = n - 1; 
+        	           break;
+        	  case 8 : System.out.print("                 May " + year);
+        	           n = 31;
+        	           break;
+        	  case 7 : System.out.print("                 June " + year);
+        	           n = n - 1; 
+	                   break;
+        	  case 6 : System.out.print("                 July " + year);
+        	           n = 31; 
+	                   break;
+        	  case 5 : System.out.print("                 August " + year);
+        	           n = 31; 
+                       break;
+        	  case 4 : System.out.print("                 September " + year);
+        	           n = n - 1; 
+                       break;
+        	  case 3 : System.out.print("                 October " + year);
+        	           n = 31; 
+                       break;
+        	  case 2 : System.out.print("                 November " + year);
+        	           n = n - 1; 
+                       break;
+        	  case 1 : System.out.print("                 December " + year);
+        	           n = 31; 
+                       break;
+        	  }        	  
+        	  System.out.print("\n---------------------------------------------------");
+        	  System.out.print("\n");
+        	  
+         for(w = 0;w < 7; w ++) {
+        	 switch(w % 7) {
+        	 case 0 : System.out.print("Sun" + "\t");break;
+        	 case 1 : System.out.print("Mon" + "\t");break;
+        	 case 2 : System.out.print("Tue" + "\t");break;
+        	 case 3 : System.out.print("Wed" + "\t");break;
+        	 case 4 : System.out.print("Thu" + "\t");break;
+        	 case 5 : System.out.print("Fri" + "\t");break;
+        	 case 6 : System.out.print("Sat" + "\t");break;
+        	 }
+         }
+         System.out.print("\n");
+         for(k = 1; k <= day; k ++)
+         System.out.print("\t");
+         for (i = 1; i <= n; i ++) {
+        	  System.out.print(i + "\t");
+        	  if((i + day)% 7 == 0) {
+        		  System.out.print("\n");
+        	  }
+          
+          }
+          System.out.print("\n");
+          System.out.print("\n");
+          day = (n + day) % 7;
+          }
+		 	
+    	input.close();
+	}
+	
+}
