@@ -1,0 +1,56 @@
+package test;
+import java.util.Scanner;
+import java.util.Random;
+public class tests {
+
+	public static void main(String[] args) {	
+    Scanner input = new Scanner(System.in);
+    Random random = new Random();
+    int k = 0;//统计电脑赢的次数
+    int count = 0;//统计用户赢的次数
+    for(;k  < 3 && count < 3; ) {//用户或计算机赢到两次以上就停止，只要k或者count小于3就停止循环
+    System.out.println("scissor (0), rock (1), paper (2): ");
+    int i = input.nextInt();
+    int j = random.nextInt(3);//产生[0,3)的随机整数       
+    
+    
+    while(i == 0) {
+    	if(i == j) {
+        	System.out.print("The computer is scissor. You are scissor too. It is a draw");break;
+        }
+    	if(i - j == -1) {
+        	System.out.print("The computer is rock. You are scissor. You Lose"); k ++;break;
+        }   
+        if(i - j == -2) {
+        	System.out.print("The computer is paper. You are scissor. You Win"); count ++; break;
+        }
+    }
+    while(i == 1) {
+    	if(i == j) {
+        	System.out.print("The computer is rock. You are rock too. It is a draw");break;
+        }
+    	if(i - j == -1) {
+        	System.out.print("The computer is paper. You are rock. You Lose"); k ++; break;
+        }   
+        if(i - j == 1) {
+        	System.out.print("The computer is scissor. You are rock. You Win"); count ++; break;
+        }
+    }
+    while(i == 2) {
+    	if(i == j) {
+        	System.out.print("The computer is paper. You are paper too. It is a draw");break;
+        }
+    	if(i - j == 1) {
+        	System.out.print("The computer is rock. You are paper. You Win"); count ++; break;
+        }   
+        if(i - j == 2) {
+        	System.out.print("The computer is scissor. You are paper. You Lose"); k ++; break;
+        }
+    }
+    System.out.print("\n------------------------------------------------");
+    System.out.print("\n");   
+    }
+    input.close();
+    
+	}
+}
