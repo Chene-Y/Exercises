@@ -1,0 +1,40 @@
+package test;
+import java.util.*;
+public class tests {
+	
+	public static boolean mima() {
+		Scanner in = new Scanner(System.in);
+		String s= in.nextLine();	
+		in.close();
+		
+		int n = 0;
+		for(int i = 0; i < s.length(); i ++) {//遍历每个字符
+			if(Character.isDigit(s.charAt(i))) {//判断是否是数字
+				n ++;
+			}
+			if(!Character.isLetter(s.charAt(i)) && !Character.isDigit(s.charAt(i))) {//判断是否是字母和数字
+				return false;
+			}
+				
+		}
+		if(s.length() >= 8 && n >= 2) 
+			return true;
+		else
+			return false;
+		
+	}
+	
+
+	public static void main(String[] args) {
+		if(mima() == true)
+		System.out.print("Valid Password");
+		else
+		System.out.print("Invalid Password");
+		
+		
+		
+		
+		
+	
+	}	
+}
