@@ -1,0 +1,24 @@
+package test;
+import java.util.Scanner;
+public class tests {
+	
+	public static double sqrt() {
+		Scanner input = new Scanner(System.in);
+		double n= input.nextLong();
+		double lastGuess= input.nextLong();
+		input.close();
+		
+		double nextGuess;
+		nextGuess = (lastGuess + n / lastGuess) / 2;
+		for(; nextGuess - lastGuess > 0.01 || nextGuess - lastGuess < -0.01;) {
+			lastGuess = nextGuess;
+			nextGuess = (lastGuess + n / lastGuess) / 2;
+		}
+		return nextGuess;		
+	}
+	
+
+	public static void main(String[] args) {
+		System.out.print(sqrt());	
+	}	
+}
