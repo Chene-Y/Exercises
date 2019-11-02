@@ -1,0 +1,48 @@
+package test; 
+
+public class tests {
+	
+public static void main(String[] args) { 
+	int num = 2;
+	int n = 0;
+	int k = 0;
+	while(n < 100) {
+		boolean sushu = true;
+		boolean huiwenshu = true;	
+		for(int m = 2; m < num; m++) { //判断素数
+			 if(num % m == 0) {
+				 sushu = false; 
+				 break;
+			    }
+		}
+		if(sushu == true) {
+			 String s = num + "";//如果是素数则将num转成字符串s
+			 if(s.length() == 1) {//判断一位数
+				 System.out.print(num + "\t");
+				 n ++;
+				 k ++;
+				 
+			 }
+			 else {
+	         for(int i = 0; i < s.length() / 2; i++) {
+		         if(s.charAt(i) != s.charAt(s.length() - i - 1)) //判断回文数
+		        	huiwenshu = false;	
+		         
+		    	}
+	         if(huiwenshu == true) {
+	        	 System.out.print(num + "\t");
+	        	 n++;
+	        	 k++;
+	        	 
+	         }
+	         
+	         if(k == 10){                   //一行输出10个
+                 System.out.println();
+                 k = 0;
+              }    
+      }
+	}		
+		num ++;
+	}
+}
+}
